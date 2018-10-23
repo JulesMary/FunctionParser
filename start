@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mkdir -p js
+elm-live src/Main.elm --port 8080 -- --output=js/main.js $@

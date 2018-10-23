@@ -1,0 +1,28 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /js/(.*)
+  static_files: js/\1
+  upload: js/(.*)
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?\..*$
+- node_modules/
+- src/
+- package.json
+- package.json.lock
+- webpack.config.js
+- project_name
+- start
+- build
+- deploy
+- dist
