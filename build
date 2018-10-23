@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mkdir -p js
+elm make src/Main.elm --output=js/main.js --optimize $@
